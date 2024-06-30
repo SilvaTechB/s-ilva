@@ -1,0 +1,16 @@
+
+services:
+- type: web
+  name: silvabot
+  runtime: docker
+  repo: https://github.com/Sylivanu/s-ilva
+  plan: free
+  envVars:
+  - key: SESSION_ID
+  - key: MODE
+  - key: BOT_NAME
+    sync: true
+  region: oregon
+  dockerContext: .
+  dockerfilePath: ./Dockerfile
+version: "1"
